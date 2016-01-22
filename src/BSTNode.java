@@ -53,6 +53,57 @@ public class BSTNode<E extends Comparable<E>> implements IBSTNode<E>
 		}
 	}
 	
+	public String inOrder()
+	{
+		String order = "";
+		String tempLeft = "";
+		String tempRight = "";
+		
+		if (left != null)
+			tempLeft = left.inOrder();
+		
+		order += data + ", ";
+		
+		if (right != null)
+			tempRight = right.inOrder();
+		
+		return tempLeft + order + tempRight;
+	}
+	
+	public String postOrder()
+	{
+		String order = "";
+		String tempLeft = "";
+		String tempRight = "";
+		
+		if (left != null)
+			tempLeft = left.postOrder();
+		
+		if (right != null)
+			tempRight = right.postOrder();
+		
+		order += data + ", ";
+		
+		return tempLeft + tempRight + order;
+	}
+	
+	public String preOrder()
+	{
+		String order = "";
+		String tempLeft = "";
+		String tempRight = "";
+		
+		order += data + ", ";
+		
+		if (left != null)
+			tempLeft = left.preOrder();
+		
+		if (right != null)
+			tempRight = right.preOrder();
+		
+		return order + tempLeft + tempRight;
+	}
+	
 	public int compareTo(IBSTNode<E> other)
 	{
 		return data.compareTo(other.getData());

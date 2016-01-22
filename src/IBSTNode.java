@@ -8,4 +8,7 @@ public interface IBSTNode<E extends Comparable<E>>
 	void add(IBSTNode<E> node);
 	int compareTo(IBSTNode<E> other);
 	String toString();
+	String inOrder();
+	String postOrder();
+	String preOrder();
 }

@@ -15,8 +15,14 @@ public class BinarySearchTree<E extends Comparable<E>> implements IBinarySearchT
 		tree.add(50);
 		tree.add(80);
 		tree.add(30);
+		tree.add(25);
+		tree.add(45);
+		tree.add(95);
 		System.out.println("Left node: " + tree.root().getLeft());
 		System.out.println("Right node: " + tree.root().getRight());
+		System.out.println("Tree in order: " + tree.inOrder());
+		System.out.println("Tree in post order: " + tree.postOrder());
+		System.out.println("Tree in pre order: " + tree.preOrder());
 		
 		//output the value of the toString method of the tree
 		System.out.println(tree);
@@ -61,19 +67,19 @@ public class BinarySearchTree<E extends Comparable<E>> implements IBinarySearchT
 	public String inOrder()
 	{
 		//TODO: Future Lab
-		return "";
+		return root.inOrder();
 	}
 	
 	public String postOrder()
 	{
 		//TODO: Future Lab
-		return "";	
+		return root.postOrder();	
 	}
 	
 	public String preOrder()
 	{
 		//TODO: Future Lab
-		return "";
+		return root.preOrder();
 	}
 	
 	public String toString()

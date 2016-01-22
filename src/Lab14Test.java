@@ -36,7 +36,7 @@ public class Lab14Test
 	public void testAdd()
 	{
 		IBinarySearchTree<Integer> tree = new BinarySearchTree<Integer>();
-		tree.add(5);w
+		tree.add(5);
 		assertEquals("[5]", tree.toString(), "testAdd");
 	}
 	
