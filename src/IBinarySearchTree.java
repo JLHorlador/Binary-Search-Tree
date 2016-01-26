@@ -7,4 +7,5 @@ public interface IBinarySearchTree<E extends Comparable<E>>
 	String inOrder();
 	String postOrder();
 	String preOrder();
+	boolean contains(E n);
 }

@@ -18,11 +18,15 @@ public class BinarySearchTree<E extends Comparable<E>> implements IBinarySearchT
 		tree.add(25);
 		tree.add(45);
 		tree.add(95);
-		System.out.println("Left node: " + tree.root().getLeft());
-		System.out.println("Right node: " + tree.root().getRight());
 		System.out.println("Tree in order: " + tree.inOrder());
 		System.out.println("Tree in post order: " + tree.postOrder());
 		System.out.println("Tree in pre order: " + tree.preOrder());
+		System.out.println("Tree contains 45: " + tree.contains(45));
+		System.out.println("Tree contains 95: " + tree.contains(95));
+		System.out.println("Tree.contains 50: " + tree.contains(50));
+		System.out.println("Tree contains 43: " + tree.contains(43));
+		System.out.println("Tree contains 21: " + tree.contains(21));
+		System.out.println("Tree contains 103: " + tree.contains(103));
 		
 		//output the value of the toString method of the tree
 		System.out.println(tree);
@@ -30,7 +34,7 @@ public class BinarySearchTree<E extends Comparable<E>> implements IBinarySearchT
 	
 	public BinarySearchTree()
 	{
-		//initlize the root to null (this is an empty Tree!)
+		//initialize the root to null (this is an empty Tree!)
 		root = null;
 	}
 	
@@ -80,6 +84,11 @@ public class BinarySearchTree<E extends Comparable<E>> implements IBinarySearchT
 	{
 		//TODO: Future Lab
 		return root.preOrder();
+	}
+	
+	public boolean contains(E n)
+	{
+		return root.contains(n);
 	}
 	
 	public String toString()

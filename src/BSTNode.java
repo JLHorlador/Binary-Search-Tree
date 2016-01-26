@@ -104,6 +104,24 @@ public class BSTNode<E extends Comparable<E>> implements IBSTNode<E>
 		return order + tempLeft + tempRight;
 	}
 	
+	public boolean contains(E n)
+	{	
+		
+		if (n.compareTo(data) == 0)
+			return true;
+		
+		if (left != null && n.compareTo(data) < 0)
+		{
+			return left.contains(n);
+		}
+		else if (right != null && n.compareTo(data) > 0)
+		{
+			return right.contains(n);
+		}
+		
+		return false;
+	}
+	
 	public int compareTo(IBSTNode<E> other)
 	{
 		return data.compareTo(other.getData());

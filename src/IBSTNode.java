@@ -11,4 +11,5 @@ public interface IBSTNode<E extends Comparable<E>>
 	String inOrder();
 	String postOrder();
 	String preOrder();
+	boolean contains(E n);
 }
